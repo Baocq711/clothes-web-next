@@ -1,36 +1,38 @@
-import BoxIcon from '@/components/header/boxIcon';
 import React from 'react';
+import { IoSearch } from 'react-icons/io5';
+import { LuShoppingCart, LuUserCircle2 } from 'react-icons/lu';
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 const Header = () => {
   return (
-    <header className='container h-[83px] relative'>
-      <nav className='flex justify-between h-full '>
-        <div className='flex gap-6 justify-center items-center'>
-          <div className='flex justify-center items-center gap-2'>
-            <BoxIcon type='facebook' />
-            <BoxIcon type='instagram' />
-            <BoxIcon type='youtube' />
+    <header>
+      <nav className='container flex-center h-24 gap-10'>
+        <div className='text-[32px]/[24px] font-bold uppercase'>Shop.Co</div>
+        <div className='flex-center gap-4'>
+          <div className='text-[16px]/[12px] flex-center gap-1'>
+            Shop <MdKeyboardArrowDown size={16} />
           </div>
-          <div className='flex justify-center items-center gap-6'>
-            <div>Elements</div>
-            <div>Our Shop</div>
-            <div>About us</div>
+          <div className='text-[16px]/[12px] flex-center'>
+            <span>On Sale</span>
           </div>
-        </div>
-        <div className='flex justify-center items-center gap-5'>
-          <div className='flex justify-center items-center gap-6'>
-            <div>Contacts</div>
-            <div>Sign in</div>
-            <div>Sign up</div>
+          <div className='text-[16px]/[12px] flex-center'>
+            <span>New Arrivals</span>
           </div>
-          <div className='flex justify-center items-center gap-2'>
-            <BoxIcon type='reload' />
-            <BoxIcon type='likes' />
-            <BoxIcon type='carts' />
+          <div className='text-[16px]/[12px] flex-center'>
+            <span>Brands</span>
           </div>
         </div>
-        <div className='absolute left-1/2 top-1/2 -translate-x-[50%] -translate-y-[50%] z-[9999]'>
-          Clothes Store
+        <div className='bg-[#f0f0f0] rounded-full h-[48px] w-[577px] flex items-center gap-3 py-3 px-4'>
+          <IoSearch color='#909090' size={24} />
+          <input
+            type='text'
+            placeholder='Search for products'
+            className='bg-inherit focus:outline-none w-[calc(100%-36px-12px)] h-[22]'
+          />
+        </div>
+        <div className='flex-center gap-[14px]'>
+          <LuShoppingCart color='#000' size={24} />
+          <LuUserCircle2 color='#000' size={24} />
         </div>
       </nav>
     </header>

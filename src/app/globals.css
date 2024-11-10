@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body {
+  font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
 }
-

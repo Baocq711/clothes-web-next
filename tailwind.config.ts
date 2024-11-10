@@ -1,28 +1,33 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Config } from 'tailwindcss';
 
-const config: Config = {
+export default {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    // './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    // './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    // './src/screens/**/*.{js,ts,jsx,tsx,mdx}',
+    // './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       container: {
         center: true,
         screens: {
-          sm: '100%',
-          md: '100%',
-          lg: '1024px',
-          xl: '1280px',
+          '2xl': '1240px',
         },
-      },
-      colors: {
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [
+    function ({ addUtilities }: { addUtilities: any }) {
+      addUtilities({
+        '.flex-center': {
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        },
+      });
+    },
+  ],
+} satisfies Config;
