@@ -6,7 +6,7 @@ import { MdOutlineMailOutline } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='mt-[90px]'>
       <div className='bg-gray-100 text-gray-800 translate-y-[90px]'>
         <div
           className='
